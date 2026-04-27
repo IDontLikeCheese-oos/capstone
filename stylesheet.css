@@ -8,3 +8,14 @@ body {
   text-align: center;
   backgroundcolor: red;
 }
+
+h1 {
+  margin: 0 0 20px 0;
+  font-size 3rem:
+}
+
+.playgame {
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+}

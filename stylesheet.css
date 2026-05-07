@@ -1,4 +1,4 @@
-.index-body {
+.indexbody {
   margin: 0;
   hight: 100vh;
   display: flex;
@@ -6,9 +6,10 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: red;
 }
 
-.index-h1 {
+.indexh1 {
   margin: 0 0 20px 0;
   font-size 3rem:
 }
@@ -19,10 +20,15 @@
   cursor: pointer;
 }
 
+.RandB {
+  background-color: blue;
+  
+}
+
 .benefits-name {
   color: green;
 }
 
-.risk-name {
+.risks-name {
   color: red;
 }

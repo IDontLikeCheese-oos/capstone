@@ -1,22 +1,22 @@
 .indexbody {
   margin: 0;
-  hight: 100vh;
+   hight: 100vh;
   display: flex;
-  flex-direction: column;
+   flex-direction: column;
   justify-content: center;
-  align-items: center;
+   align-items: center;
   text-align: center;
-  background-color: red;
+   background-color: red;
 }
 
 .indexh1 {
   margin: 0 0 20px 0;
-  font-size 3rem:
+   font-size 3rem:
 }
 
 .playgame {
   padding: 12px 24px;
-  font-size: 18px;
+   font-size: 18px;
   cursor: pointer;
 }
 
@@ -32,3 +32,10 @@
 .risks-name {
   color: red;
 }
+
+.aboutbody {
+  background-color: black;
+}
+
+.whitetext {
+  color: white;

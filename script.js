@@ -9,4 +9,4 @@ function createDeck() {
   deck = [];
 
   for (let color of colors) {
-    for (let value of values)
+    for (let value of values) {

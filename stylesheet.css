@@ -1,28 +1,27 @@
 .indexbody {
   margin: 0;
-   hight: 100vh;
+  height: 100vh;
   display: flex;
-   flex-direction: column;
+  flex-direction: column;
   justify-content: center;
-   align-items: center;
+  align-items: center;
   text-align: center;
-   background-color: red;
+  background-color: red;
 }
 
 .indexh1 {
   margin: 0 0 20px 0;
-   font-size 3rem:
+  font-size: 3rem;
 }
 
-.playgame {
+.playGame {
   padding: 12px 24px;
-   font-size: 18px;
+  font-size: 18px;
   cursor: pointer;
 }
 
 .RandB {
   background-color: darkblue;
-  
 }
 
 .benefits-name {
@@ -39,3 +38,4 @@
 
 .whitetext {
   color: white;
+}

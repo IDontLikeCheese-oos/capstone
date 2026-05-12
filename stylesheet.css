@@ -39,3 +39,36 @@
 .whitetext {
   color: white;
 }
+
+.gameBody {
+  margin: 0;
+  background-color: green;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.centerArea {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+#drawPile, #discardPile {
+  width: 100px;
+  height: 140px;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#playerCards, #cpuCards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}

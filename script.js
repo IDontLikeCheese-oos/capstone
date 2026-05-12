@@ -10,3 +10,10 @@ function createDeck() {
 
   for (let color of colors) {
     for (let value of values) {
+   deck.push(color + " " + value);
+   deck.push(color + " " + value); //aparaently you need two of these\\
+  }
+}
+
+return deck;
+}

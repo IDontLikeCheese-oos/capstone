@@ -6,8 +6,25 @@
     <title>Game page</title>
     <link href="stylesheet.css" rel="stylesheet" />
 </head>
-<body>
-  <p>Player Hand</p>
-    <p>CPU Hand</p>
+<body class="gameBody">
+
+  <h1>UNO Game</h1>
+
+  <div class="cpuSection">
+    <h2>CPU Hand</h2>
+    <div id="cpuCards"></div>
+  </div>
+
+  <div class="centerArea">
+    <div id="drawPile">Draw</div>
+    <div id="discardPile">Discard</div>
+  </div>
+
+  <div class="playerSection">
+    <h2>Your Hand</h2>
+    <div id="playerCards"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

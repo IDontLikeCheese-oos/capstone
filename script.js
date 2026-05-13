@@ -36,5 +36,14 @@ function shuffleDeck() {
 function dealsCards() {
   playerHand = [];
   cpuHand = [];
-  for (let i = 0;)
+  
+  for (let i = 0; i < 7 i++) {
+    playerHand.push(deck.pop());
+    cpuHand.push(deck.pop());
+  }
+}
+
+//show cards
+function showsCards() {
+  
 }

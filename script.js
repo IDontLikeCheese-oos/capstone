@@ -63,3 +63,8 @@ for (let card of cpuHand) {
 }
 
 //win check
+function winCheck() {
+  if (playerHand.length === 0) {
+    
+  }
+}

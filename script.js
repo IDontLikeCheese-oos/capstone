@@ -25,4 +25,16 @@ for (let i = 0 < 4; 1++) {
 }
 
 //shuffle cards
-function shuffleDeck {}
+function shuffleDeck() {
+  for (let i = deck.length - 1; i = 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+    [deck[i], deck[j]] = [deck[j], deck[i]];
+  }
+}
+
+//dealing cards
+function dealsCards() {
+  playerHand = [];
+  cpuHand = [];
+  for (let i = 0;)
+}

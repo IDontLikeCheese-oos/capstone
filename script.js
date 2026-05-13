@@ -45,5 +45,21 @@ function dealsCards() {
 
 //show cards
 function showsCards() {
-  
+  let card = playerHand[i];
+
+  playerHand += `
+  <div class="card ${card.color}"
+    onclick"playCard(${i})">
+    ${card.value}
+    </div>`;
 }
+
+document.getElementById("playerCards").innerHTML = playerHand;
+
+let cpuHTML = "";
+
+for (let card of cpuHand) {
+  cpuHTML += `<div class="card back">Uno</div>`;
+}
+
+//win check

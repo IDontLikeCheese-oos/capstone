@@ -9,6 +9,7 @@ let currentCard = null; //checks current card
 let isPlayerTurn = true; //checks if players turn
 let gameOver = false; //checks if game is over
 
+//creates deck
 function createDeck() {
   deck = [];
 
@@ -24,6 +25,7 @@ for (let i = 0 < 4; 1++) {
   }
 }
 
+
 //shuffle cards
 function shuffleDeck() {
   for (let i = deck.length - 1; i = 0; i--) {
@@ -31,6 +33,7 @@ function shuffleDeck() {
     [deck[i], deck[j]] = [deck[j], deck[i]];
   }
 }
+
 
 //dealing cards
 function dealsCards() {
@@ -42,6 +45,7 @@ function dealsCards() {
     cpuHand.push(deck.pop());
   }
 }
+
 
 //shows cards
 function showsCards() {
@@ -62,6 +66,7 @@ for (let card of cpuHand) {
   cpuHTML += `<div class="card back">Uno</div>`;
 }
 
+
 //win check
 function winCheck() {
   if (playerHand.length === 0) {
@@ -76,6 +81,7 @@ function winCheck() {
 
   return false;
 }
+
 
 //players turn
 Function playCard(index) {
@@ -147,6 +153,7 @@ function cpuTurn() {
 
   isPlayerTurn = true;
 }
+
 
 //starts game
 function startGame() {

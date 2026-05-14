@@ -43,7 +43,7 @@ function dealsCards() {
   }
 }
 
-//show cards
+//shows cards
 function showsCards() {
   let card = playerHand[i];
 
@@ -96,7 +96,7 @@ Function playCard(index) {
     document.getElementById("discardPile").innerHTML = 
      currentCard.color + " " + currentCard.value;
 
-     showsCards():
+     showCards():
 
      if (winCheck()) return;
 
@@ -106,4 +106,44 @@ Function playCard(index) {
   } else {
     alert("that card isn't playable");
   }
+}
+
+
+//cpu turn
+function cpuTurn() {
+  
+  if (gameOver) return;
+
+  let played = false;
+
+  for (let i = 0; i <cpuHand.length; i++) {
+
+    let card = cpuHand[i];
+
+    if (
+      card.color === currentCard.color
+      card.value === currentCard.value
+      card.color === "wild"
+    ) {
+
+      cpuHand.splice(i, 1);
+      currentCard = card;
+
+      document.getElementById("discardPile").innerHTML =
+      currentCard.color + " " + currentCard.value;
+
+      played = true;
+      break;
+    }
+  }
+
+  if (!played) {
+    cpuHand.push(deck.pop());
+  }
+
+  showCards();
+
+  if (winCheck());
+
+  isPlayerTurn = true;
 }

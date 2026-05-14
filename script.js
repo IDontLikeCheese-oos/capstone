@@ -147,3 +147,21 @@ function cpuTurn() {
 
   isPlayerTurn = true;
 }
+
+//starts game
+function startGame() {
+
+  createDeck();
+  shuffleDeck();
+  dealsCards();
+
+  currentCard = deck.pop();
+
+  document.getElementById("discardPile").innerHTML =
+  currentCard.color + " " + currentCard.value;
+
+  isPlayerTurn = true;
+  gameOver = false;
+}
+
+startGame();

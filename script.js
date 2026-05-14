@@ -3,11 +3,11 @@ const values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 let deck = []; // Forms the main deck of card
 let playerHand = []; //cards in player hand
-let cpuHand = [];
+let cpuHand = []; //cards in cpu hand
 
-let currentCard = null;
-let isPlayerTurn = true;
-let gameOver = false;
+let currentCard = null; //checks current card
+let isPlayerTurn = true; //checks if players turn
+let gameOver = false; //checks if game is over
 
 function createDeck() {
   deck = [];
@@ -101,7 +101,7 @@ Function playCard(index) {
      if (winCheck()) return;
 
      isPlayerTurn = false;
-     setTimeout(cputTurn, 15);
+     setTimeout(cpuTurn, 15);
 
   } else {
     alert("that card isn't playable");

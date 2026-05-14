@@ -162,6 +162,8 @@ function startGame() {
 
   isPlayerTurn = true;
   gameOver = false;
+
+  showsCards();
 }
 
 startGame();

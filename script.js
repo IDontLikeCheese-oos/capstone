@@ -1,4 +1,4 @@
-const colors = ["Red", "Blue", "Green", "Yellow"];
+const colors = ["red", "blue", "green", "yellow"];
 const values = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 let deck = []; // Forms the main deck of card
@@ -19,7 +19,7 @@ function createDeck() {
   }
 }
 
-for (let i = 0 < 4; 1++) {
+for (let i = 0; < 4; 1++) {
     deck.push({ color: "wild", value: "wild"});
     deck.push({ color: "wild", value: "wild+4"});
   }
@@ -28,7 +28,7 @@ for (let i = 0 < 4; 1++) {
 
 //shuffle cards
 function shuffleDeck() {
-  for (let i = deck.length - 1; i = 0; i--) {
+  for (let i = deck.length - 1; i > 0; i--) {
     let j = Math.floor(Math.random() * (i + 1));
     [deck[i], deck[j]] = [deck[j], deck[i]];
   }
@@ -40,35 +40,43 @@ function dealsCards() {
   playerHand = [];
   cpuHand = [];
   
-  for (let i = 0; i < 7 i++) {
+  for (let i = 0; i < 7; i++) {
     playerHand.push(deck.pop());
     cpuHand.push(deck.pop());
   }
 }
 
+//show cards
+function showCards() {
 
-//shows cards
-function showsCards() {
-  let card = playerHand[i];
+  let playerHTML = "";
 
-  playerHand += `
-  <div class="card ${card.color}"
-    onclick"playCard(${i})">
-    ${card.value}
-    </div>`;
-}
+  for (let i = 0; i < playerHand.length; i++) {
 
-document.getElementById("playerCards").innerHTML = playerHand;
+    let card = playerHand[i];
 
-let cpuHTML = "";
+    playerHTML += `
+      <div class="card ${card.color}"
+           onclick="playCard(${i})">
+        ${card.value}
+      </div>`;
+  }
 
-for (let card of cpuHand) {
-  cpuHTML += `<div class="card back">Uno</div>`;
+  document.getElementById("playerCards").innerHTML = playerHTML;
+
+  let cpuHTML = "";
+
+  for (let card of cpuHand) {
+    cpuHTML += `<div class="card back">UNO</div>`;
+  }
+
+  document.getElementById("cpuCards").innerHTML = cpuHTML;
 }
 
 
 //win check
 function winCheck() {
+  
   if (playerHand.length === 0) {
     alert("You Win");
     gameOver = true;
@@ -84,7 +92,7 @@ function winCheck() {
 
 
 //players turn
-Function playCard(index) {
+function playCard(index) {
 
   if(gameOver) return;
   if (!isPlayerTurn) return
@@ -92,10 +100,10 @@ Function playCard(index) {
   let card = playerHand[index];
 
   if (
-    card.color === currentCard.color
-    card.value === currentCard.value
-    card.color === "wild"
-  ) {
+  card.color === currentCard.color ||
+  card.value === currentCard.value ||
+  card.color === "wild"
+ ) {
     playerHand.splice(index,1);
     currentCard = card;
 
@@ -127,10 +135,10 @@ function cpuTurn() {
     let card = cpuHand[i];
 
     if (
-      card.color === currentCard.color
-      card.value === currentCard.value
-      card.color === "wild"
-    ) {
+  card.color === currentCard.color ||
+  card.value === currentCard.value ||
+  card.color === "wild"
+  ) {
 
       cpuHand.splice(i, 1);
       currentCard = card;
@@ -149,7 +157,7 @@ function cpuTurn() {
 
   showCards();
 
-  if (winCheck());
+  if (winCheck()) return;
 
   isPlayerTurn = true;
 }

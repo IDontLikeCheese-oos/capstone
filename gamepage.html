@@ -1,8 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Home page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game page</title>
+    <link href="stylesheet.css" rel="stylesheet" />
 </head>
-<body>
-  
+<body class="gameBody">
+
+  <h1>UNO Game</h1>
+
+  <div class="cpuSection">
+    <h2>CPU Hand</h2>
+    <div id="cpuCards"></div>
+  </div>
+
+  <div class="centerArea">
+    <div id="drawPile">Draw</div>
+    <div id="discardPile">Discard</div>
+  </div>
+
+  <div class="playerSection">
+    <h2>Your Hand</h2>
+    <div id="playerCards"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+</html>

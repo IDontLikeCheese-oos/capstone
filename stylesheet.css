@@ -1,1 +1,111 @@
+.indexbody {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: red;
+}
 
+.indexh1 {
+  margin: 0 0 20px 0;
+  font-size: 3rem;
+}
+
+.playGame {
+  padding: 12px 24px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.RandB {
+  background-color: black;
+}
+
+.benefits-name {
+  color: green;
+}
+
+.risks-name {
+  color: red;
+}
+
+.RnB-Text {
+  color: white;
+}
+  
+.aboutbody {
+  background-color: black;
+}
+
+.whitetext {
+  color: white;
+}
+
+.gameBody {
+  margin: 0;
+  background-color: green;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.centerArea {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+#drawPile, #discardPile {
+  width: 100px;
+  height: 140px;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+#playerCards, #cpuCards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px;
+}
+
+.card {
+  width: 70px;
+  height: 100px;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  font-weight: bold;
+  color: white;
+}
+
+.red { background: red; }
+.blue { background: blue; }
+.green { background: green; }
+.yellow { background: gold; }
+.wild { background: black; }
+
+.back {
+  background: gray;
+}
+
+#discardPile {
+  width: 100px;
+  height: 140px;
+  background: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}

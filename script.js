@@ -15,11 +15,11 @@ function createDeck() {
 
   for (let color of colors) {
     for (let value of values) {
-   deck.push({ color, value }); //pushes color and values on cards\\
+   deck.push({ color, value }); //pushes color and values on cards
   }
 }
 
-for (let i = 0; < 4; 1++) {
+for (let i = 0; i < 4; i++) {
     deck.push({ color: "wild", value: "wild"});
     deck.push({ color: "wild", value: "wild+4"});
   }
@@ -84,6 +84,7 @@ function winCheck() {
   }
   if (cpuHand.length === 0) {
     alert("CPU Wins");
+    gameOver = true;
     return true;
   }
 
@@ -95,7 +96,7 @@ function winCheck() {
 function playCard(index) {
 
   if(gameOver) return;
-  if (!isPlayerTurn) return
+  if (!isPlayerTurn) return;
 
   let card = playerHand[index];
 
@@ -110,12 +111,12 @@ function playCard(index) {
     document.getElementById("discardPile").innerHTML = 
      currentCard.color + " " + currentCard.value;
 
-     showCards():
+     showCards();
 
      if (winCheck()) return;
 
      isPlayerTurn = false;
-     setTimeout(cpuTurn, 15);
+     setTimeout(cpuTurn, 1000);
 
   } else {
     alert("that card isn't playable");
@@ -178,5 +179,7 @@ function startGame() {
   isPlayerTurn = true;
   gameOver = false;
 
-  showsCards();
+  showCards();
 }
+
+startGame();
